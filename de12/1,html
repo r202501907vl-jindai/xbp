@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>ぶち</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+     <link rel="stylesheet" href="./css/style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body>
+    <h1>第1回</h1>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div>
+         <!-- ①↓に文字を書いてみよう -->
+gitとは？<br>
+自分たちがWebサイトを編集する際にする際に<br>
+コードを使って管理する分散型管理システムである。<br>
+
+         <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう -->
+
+         <!-- ③↓に箇条書きをしてみよう -->
+<ol> 
+    <li>赤巻紙
+    <li>青巻紙<br>
+         <!-- ④↓に外部リンクを作ってみよう -->
+<a href="./index.html">デザイン演習Ⅰ・Ⅱトップページ</a><br>
+<a href="../index.html">XBPトップページ</a><br>
+<a href="https://www.yahoo.co.jp/"target="blank">Yahoo</a><br>
+<a href="./files/test.pdf" target="_blank"pdfファイル</a><br>
+</body>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8WRjQAKUlio?si=Dk1G-Y9tv0ja7Oog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+</div>
