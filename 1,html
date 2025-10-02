@@ -26,10 +26,9 @@
     <li>コピー元が残っているため、編集前のバージョンに残すことができる。</li>
     <li>ファイルの区別がつきやすくなる。</il>
     <li>多人数での上書きによる事故が無くなる。</il>
-</ul> 
-<img crs="de12/images/original-6A918C20-2A56-48FD-9178-5ABA71E36D02.jpeg"width="30%"><br><dip></dip>
+</ul>    
  <!-- ②↓に画像（imagesフォルダにあるtest.png）を挿入してみよう --
-
+<img  src="./images/original-6ABC5AF6-A7AC-400E-A24B-F93FB299FF38.jpeg U"width="30%"><br><dip>
          <!-- ③↓に箇条書きをしてみよう -->
 <h2>htmlとは？</h2>
 <ol>
