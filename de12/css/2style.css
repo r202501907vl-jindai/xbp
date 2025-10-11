@@ -22,14 +22,17 @@ logotohome ima1 g{
 
 /* ========== common ========== */
 html, body {
+
+    
 	font-size: 16px;
 	font-family: sans-serif;
     color:#422b2b;
     margin-left: 15px;
     margin-bottom: 40px;
-    background:#ffe2e2;
+    background:#fffdec;
 	
 }
+ 
 h1{
     text-indent: 0em;
 }
@@ -49,7 +52,51 @@ p{
 }
 span.blackback{
     text-indent: 3em;
-    background:#ffe2e2;
+    background:#fffdec;
     color:#422b2b;
 }
 
+
+
+ol, ol {
+  color: #724821;/*文字色*/
+  border: double 5px #724821;/*破線 太さ 色*/
+  background: #fff8b6; /*背景色*/
+  padding: 0.5em 0.5em 0.5em 2em;
+  
+}
+
+ol li, ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+    .box1{
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #fffdec;
+    box-shadow: 0px 0px 0px 10px #fffdec;
+    border: dashed 2px #c59742;
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+h1 {
+  color: #c59742;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #c59742;/*上線*/
+  border-bottom: solid 3px #c59742;/*下線*/
+}
+ .box2{
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #fffdec;
+    box-shadow: 0px 0px 0px 10px #fffdec;
+    border: solid 2px #ffe5b6;
+}
+.box2 p {
+    margin: 0; 
+    padding: 0;
+}
