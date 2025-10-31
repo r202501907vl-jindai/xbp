@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+     <title>ぶちの第４回　プログラミング</title>
+     <link rel="stylesheet" href="./css/4style.css">
+</head>
+<body>
+     <div class="context">
+        <h1>デザイン演習Ⅰ・Ⅱ　第４回　プログラミングゲーム</h1>
+    </div>
+
+
+
+<div class="area" >
+            <ul class="circles">
+ <ol id="box">
+  <li><a href="#1">ソースコード</a></li>
+  <li><a href="#2">補足</a></li>
+  <li><a href="#3">反省</a></li>
+  <li><a href="#4">pythonコード</a></li>
+  <li><a href="#5">参考サイト</a></li>
+</ol>                   
+           
+    
+ <div>  
+    <h2>子猫を助けよう</h2>
+    <p>このゲームは弱った子猫に家にある残り物をあげて、子猫を助けるゲームを作成した。選択肢の中に一つだけ猫にあげても大丈夫な食材が入っており、
+        それ以外は猫にとっては毒となる食材。正答率によって結末が変化するように作成した。<br>
+    </p>
+</div> 
+
+ 
+<h2 id="1">ソースコード</h2>
+<p>ok=0<br>
+
+print("あなたは深夜におなかをすかせた子猫を保護しました。家にある猫が食べれそうなご飯をあげて、救ってあげましょう。")<br>
+# --------------------------------------------------------------------------------------------------<br>
+name=input("子猫に名前を付けましょう！")<br>
+print("のどが渇いているようだ。")<br>
+a=input("冷蔵庫にあるのは…1,ヨーグルト　2,緑茶　3,ワイン")<br>
+if a=="1":<br>
+    print(name,"はヨーグルトを飲み干した。")<br>
+    ok=ok+1<br>
+else:<br>
+    print(name,"は吐き出してしまった…")<br>
+# -----------------------------------------------------------------------------------------------------<br>
+print("何か栄養のあるものをあげよう。")<br>
+b=input("棚にあるのは…1,ミックスナッツ　2,ブドウ　3,納豆")<br>
+if b=="3":<br>
+    print(name,"は納豆をぺろりと平らげた。")<br>
+    ok=ok+1<br>
+else:<br>
+    print(name,"は吐き出してしまった…")<br>
+# ----------------------------------------------------------------------------------------------------------<br>
+if ok==2:<br>
+    print(name,"は少し元気を取り戻した。")<br>
+if ok<2:      <br>
+    print(name,"はぐったりとしている。")<br>
+#-----------------------------------------------------------------------------------------------------------<br>
+print(name,"はまだ食べ足りないようだ。")<br>
+c=input("野菜をあげてみようか…1,玉ねぎ　2,かぼちゃ　3,サトイモ")<br>
+if c=="2":<br>
+    print(name,"はかぼちゃをぺろりと平らげた！")<br>
+    ok=ok+1<br>
+else:<br>
+    print(name,"は吐き出してしまった…")<br>
+# ----------------------------------------------------------------------------------------------------------<br>
+print(name,"はまだ足りないようだ。")<br>
+d=input("あと残っているのは…1,生貝2,加熱馬肉3,魚の刺身")<br>
+if d=="2":<br>
+    print(name,"はおなかいっぱいになった！")<br>
+    ok=ok+1<br>
+else:<br>
+    print(name,"は吐き出してしまった…")<br>
+# ---------------------------------------------------------------------------------------------------------- <br>
+if ok>=2:<br>
+    print(name,"はのどをゴロゴロ鳴らしている。")<br>
+else:<br>
+    print(name,"は苦しそうにうなりだした！")<br>
+# -----------------------------------------------------------------------------------------------------------<br>
+print("ー翌日ー")<br>
+
+if ok==4:<br>
+    print(name,"は元気を取り戻し、家族になった！")←ハッピーエンド<br>
+elif ok==1:<br>
+    print(name,"は修羅のごとく暴れまわり、あなたはけがをしてしまった！")<br>
+elif ok==0:<br>
+    print(name,"は……")←バットエンド<br>
+elif ok==2:<br>
+    print(name,"は家の布という布を引き裂いて、いつの間にか姿を消した。")<br>
+elif ok==3:<br>
+    print(name,"いつの間にか姿を消していた。")<br>
+# ----------------------------------------------------------------------------------------------------------<br>
+if ok==4:<br>
+    print("おめでとう！あなたは猫マスターだ！")<br>
+print("fin")<br>
+</p></div>
+
+<h2 id="2">補足</h2>
+正解率を変数を用意て加算し、その得点に応じて子猫との結末が変化する。<br>
+プレイヤーに少しでも感情移入できるように、子猫の名前は自分たちで設定できるようにした。<br>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3gUdOFVeKAI?si=Sq8u8kZcaOTgqjQt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+<h2 id="3">反省</h2>
+ストーリー系とクイズ系を織り交ぜたような内容にしようと考えたが、ストーリーが短すぎたと思った。また、プレイしてもらった人たちにいったん口頭での説明も必要であったため、
+ゲーム内での説明をもう少しわかりやすくするべきであったと思った。<br>
+<div>
+<h2 id="4"><u>使ったPythonコード</u></h2>
+<ol>
+<li>if　条件コード</li>
+<li>else　ifの条件が合わなかったとき</li>
+<li>leif　条件が複数ある時></li>
+<li>print　文章を入力できる</li>
+<li>input　名前などを入れられる</li><br>
+</li>
+</div>
+<div>
+<h2 id="5">参考にした先輩のサイト</h2>
+<a href="https://hidemasa0222.github.io/xbp/de12/hp3.html"target="_blank">ひで先輩のサイト</a>
+<a href="https://naakosan.github.io/xbp/de12/game.html"target="_blank">なーこ先輩のサイト</a>
+<a href="https://msugino21.github.io/xbp/de12/5.html"target="_blank">杉野真央先輩たちのグループのサイト</a>
+</div>
+</body>
