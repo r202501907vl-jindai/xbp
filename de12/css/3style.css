@@ -29,6 +29,7 @@ html, body {
     margin-bottom: 40px;
 	
 }
+/*グラデーション*/
 body { 
   background:linear-gradient(#daf5dd, #8dcdf7); 
 }
