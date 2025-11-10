@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>ぶちの第５回　可能性の模索</title>
+     <link rel="stylesheet" href="./css/5style.css">
+</head>
+<body style="text-align: center;"><div class="wrapper">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+ </div>
+<div class="flash">
+ <h1 class="flash-text1">　AIなぞかけ</h1>
+</div>
+<ul>
+<div class="card-5">
+<h2>使用API</h2>
+Chat　GPT
+</div>
+<br>
+<div class="card-5">
+<h2>制作過程</h2>
+私たちの班は最初はChat GPTを使って会話ボットを作ろうとしていたが、命令をいくらか変えても会話形式にすることができなかったため、最初に思いついたワンラリーで解決できるなぞかけAIを作ることにした。
+</div>
+<br>
+<div class="card-5">
+<h2>pythonコード</h2>
+<pre><code>
+from openai import OpenAI
+
+client = OpenAI(api_key="本来はここにAPIキーがあります")
+
+a=input("～とかけて")
+question =a+"に合わせてなぞかけをして。回答後に回答の自己評価を☆５標識
+と最後に「ね〇っちです」を付けて。"
+#----------------------------
+response = client.chat.completions.create(
+    model="gpt-4o-mini",
+    messages=[{"role": "user", "content": question}]
+)
+#---------------------------------------
+
+print("AIの回答：", response.choices[0].message.content)
+</code>
+</div>
+<br>
+<div class="card-5">
+<h2>動画</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-9mOvE1zg8Y?si=yW72eU4al5Xzqvnn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<br>
+<div class="card-5">
+<h2>反省点</h2>
+AIに今までのね〇っちの返答を分析させて、回答させようとしたがあまり制度の高いものではなかったためあきらめた。分析結果から回答させるにはChat GPTではなく、Google GeminiのAPIを使用したほうがよかったと思った。
+<br>
+途中AIがね〇っちとこちら側が伏字にして命令しているにも関わらず、貫通して表記するバグがおこったため、
+鍵かっこでくくる、questionを分けてみるなどいじりまくってみたが、最終的になぜ治ったのかわからなくなってしまった。
+</div>
+<br>
+<div class="card-5">
+<h2>感想</h2>
+面白くない、数回テストしたが自己評価が☆４～５しか出さないため、AIは自己評価が高いと思った。AIが人類を追い越すのはまだまだ先だと思った。
+</div>
+<br>
+<div class="card-5">
+<h3>授業メモ</h3>
+APIとは：「Application Programming Interface」の略。2つのアプリケーションをつなげる窓口的な役割。wedAPIはAPIキーを使うことでつなげることができる。
+</div>
+</ul>
+</body>
+</html>
