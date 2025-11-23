@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>ぶちの第6回　データサイエンス（データマイニング）</title>
+     <link rel="stylesheet" href="./css/6style.css">
+</head>
+<body style="text-align: center;"><div class="wrapper">
+ </div>
+<div class="flash">
+ <h1>データマイニング</h1>
+</div><ul>
+<div class="card-5">
+<h2>調査する内容</h2>
+最初は天気による売り上げの変化を分析しようと思ったが、フレームデータ同士を結合する方法が分からなかったため、それを作る過程でできた表をwebにアップしました。
+</div>
+<br>
+<div class="card-5">
+<h2></h2>
+pos.csvのdatetimeから時間帯だけを抽出して、その中で一番売り上げが多かった時間をmodeを使って出力した。<br>
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (1, 1)</small><table border="1" class="dataframe"><thead><tr><th>most_frequent_time</th></tr><tr><td>time</td></tr></thead><tbody><tr><td>12:18:00</td></tr></tbody></table></div>
+</div>
+<br>
+<div class="card-5">
+<h2>天気</h2>
+weatherのデータからどの天気の時が一番売れ行きがいいか出力したが、結果は明らかだった。<br>
+<img src=".\images\output.png"width="80%">
+<Figure size 1200x300 with 1 Axes></Figure>
+</div>
+<br>
+<div class="card-5">
+<h2>顧客の分析</h2>
+お弁当を購入した人の中で1番お金を落としてくれたタイプの人が分かるように出力したが、こちらの結果もあきらかだった。<br>
+<img src="./images/83434060-6686-4a51-8c38-aed60088fda5.png"width="80%">
+</div>
+<br>
+<div class="card-5">
+<h2>反省</h2>
+結局最後までjoinの使い方が分からなかったのでもう少しさらっておくべきだった。いろいろと初歩的なところでつまずく部分が多く、基礎からもっと丁寧にやりなおしたい。<br>
+</div>
+</ul>
+</body>
+</html>

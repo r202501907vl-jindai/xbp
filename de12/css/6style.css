@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+/* フォントを指定したいところで */
+
+.logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+.logotohome img {
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+ body {
+	font-size: 16px;
+	font-family: sans-serif;
+    color:#232121;
+    margin-left: 15px;
+    margin-bottom: 40px;
+background:linear-gradient(#ffffff, #ddf1ff); 
+}
+h3{
+    margin-left: 2em;
+}
+div{
+    margin-top: 1em;
+    margin-left: 3em;
+}
+p{
+    margin-left: 3em;
+}
+span.blackback{
+    text-indent: 3em;
+  background:#ddf1ff; 
+    color:#422b2b;
+}
+
+h1{
+    text-indent: 0em;
+    font-size: 50px;
+/*見出しロゴ*/
+}
+h2{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+.card-5 {
+  box-sizing: border-box;
+  width: 50em;
+  padding: 1.2em 2em;
+  margin: 0 auto;
+  color: #181818;
+   background: #fff9ed;
+  border: 0.5px solid #e9eaea;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #959595,0 0 15px #a4a4a4;
+  transition: 0.3s;
+  transition: transform 0.3s ease;
+}
+.card-5:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/*文字が光る*/
+.flash {
+  width: 400px;
+  margin: 50px auto 0;
+}
+
+.flash-text1{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,0 0 15px #fff;
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0.4em;
+}
+
+
+html, body {
+	font-size: 16px;
+	font-family: sans-serif;
+    color:#422b2b;
+    margin-left: 15px;
+    margin-bottom: 40px;
+
+	
+}
