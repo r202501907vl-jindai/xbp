@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+/* フォントを指定したいところで */
+
+.logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+.logotohome img {
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+ body {
+	font-size: 16px;
+	font-family: sans-serif;
+    color:#232121;
+    margin-left: 15px;
+    margin-bottom: 40px;
+background:linear-gradient(#ffffff, #ddf1ff); 
+}
+.nanamestripe {
+  height: 250px;
+  margin: 30px 0;
+  background: repeating-linear-gradient(-45deg, #ddd 0, #ddd 2px, #FFF 4px, #FFF 6px);
+}
+
+h3{
+    margin-left: 2em;
+     font-size: 20px;
+}
+div{
+    margin-top: 1em;
+    margin-left: 3em;
+}
+p{
+    margin-left: 3em;
+}
+span.blackback{
+    text-indent: 3em;
+  background:#ddf1ff; 
+    color:#422b2b;
+}
+
+h1{
+    text-indent: 0em;
+    font-size: 50px;
+/*見出しロゴ*/
+}
+h2{
+    margin-left: 1em;
+    margin-top: 1em;
+    font-size: 30px;
+}
+.button-14 a {
+  font-family: 'Noto Sans JP', serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-weight: 700;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 250px;
+  text-align: center; 
+  padding: 4px 16px 4px 0;
+  margin: 24px;
+  margin-inline: auto;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button-14 a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 2px;
+  background: #333;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.button-14 a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  rotate: 40deg;
+  right: -4px;
+  bottom: 10px;
+  transition: all 0.3s;
+}
+
+.button-14 a:hover::after,
+.button-14 a:hover::before {
+  translate: 20px 0;
+  transition: all 0.3s;
+}
+.img03 {
+  border: 10px solid #cccccc;
+  outline: 3px solid #343434;
+  padding: 5px;
+}
+.box11{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.box11 p {
+    margin: 0; 
+    padding: 0;
+}
