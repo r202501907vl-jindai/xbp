@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* 冒頭でimport */
+@import url('https://fonts.googleapis.com/css?family=Raleway:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
+/* フォントを指定したいところで */
+
+logo img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+logotohome img{
+    border-radius: 70%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover; /* 画像のトリミング */
+}
+
+
+
+/* ========== common ========== */
+html, body {
+	font-size: 16px;
+	font-family: sans-serif;
+
+    margin-left: 15px;
+    margin-bottom: 40px;
+	background: #ffffff;
+}
+h1{
+    text-indent: 0em;
+}
+h2{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+h3{
+    margin-left: 2em;
+}
+div{
+    margin-top: 1em;
+    margin-left: 3em;
+}
+p{
+    margin-left: 3em;
+}
+span.blackback{
+    text-indent: 3em;
+    background: #ffffff;
+    color: #332113;
+}
+
+.card-5 {
+  box-sizing: border-box;
+  width: 50em;
+  padding: 1.2em 2em;
+  margin: 0 auto;
+  color: #333;
+   background: #fefff4;
+  border: 0.5px solid #f5fbff;
+  border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0px 15 0px 0;
+}
+.Paper_v2 {
+background:#ffffff;
+  background-image:
+    repeating-linear-gradient(to bottom,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px),
+  
+    repeating-linear-gradient(to right,
+      transparent 25px,
+      rgba(0, 0, 0, 0.04) 26px,  rgba(0, 0, 0, 0.04) 26px,
+      transparent 27px,  transparent 51px, 
+      rgba(0, 0, 0, 0.04) 52px,  rgba(0, 0, 0, 0.04) 52px,
+      transparent 53px,  transparent 77px, 
+      rgba(0, 0, 0, 0.04) 78px,  rgba(0, 0, 0, 0.04) 78px,
+      transparent 79px,  transparent 103px, 
+      rgba(0, 0, 0, 0.04) 104px,  rgba(0, 0, 0, 0.04) 104px,
+      transparent 105px,  transparent 129px, 
+      rgba(0, 0, 0, 0.04) 130px,  rgba(0, 0, 0, 0.04) 130px);
+}
+
+.cstm-box-handdrawn {
+   margin: 2em auto; /* 外側余白 */
+   padding: 0.5em;   /* 内側余白 */
+   border-radius: 30px 60px / 60px 30px;  /* 角をランダムに丸めて手書き風に */
+   border: solid 5px #ccc7be;   /* 太めの枠線（8px、色: #ccc7be） */
+    max-width: 800px; /* 最大幅 */
+}
+
+/* ボックス内の段落 */
+.cstm-box-handdrawn p { margin:0; }
+
+/* マスキングテープ風ボックス */
+.cstm-box-masking {
+   position: relative; /* タイトル配置の基準 */
+   margin: 0.5em auto; /* 外側余白 */
+   background-color: #e6e5e5; /* ボックス背景色 */
+   max-width: 500px; /* 最大幅 */
+   max-height: 150px;
+}
+
+/* タイトル（テープ風） */
+.cstm-box-masking .box-title {
+   background-image: repeating-linear-gradient(-45deg,#F6EEEC 0, #F6EEEC 3px,#fafafa 3px,#fafafa 6px); /* ストライプ模様 */
+   transform: rotate(-2deg); /* テープの傾き */
+   box-shadow: 0 1px 2px rgb(0 0 0 / .1); /* テープの影 */
+   padding: .5em 1em; /* 内側余白 */
+   line-height: 1; /* 行の高さ */
+   position: absolute; /* 親の左上に固定 */
+   top: -1em; /* 上位置 */
+   left: 1em; /* 左位置 */
+   display: inline-block; /* 内容幅に合わせる */
+   font-size: 1.5em; /* フォントサイズ */
+   width: auto; /* 幅自動調整 */
+   max-width: calc(100% - 2em); /* 最大幅調整 */
+   white-space: nowrap; /* 折り返さない */
+   overflow: hidden; /* はみ出し非表示 */
+   text-overflow: ellipsis; /* 省略記号表示 */
+}
+
+/* コンテンツ部分の余白 */
+.cstm-box-masking .box-content {
+   padding: 2.5em 2em 2em; /* 内側余白 */
+}
+
+/* 段落の余白リセット */
+.cstm-box-masking p { margin: 0;}
+
+.btn-circle-border-simple {
+  display: inline-block;
+  text-decoration: none;
+  color: #292929;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  border: solid 2px #333;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+}
+
+.btn-circle-border-simple:hover {
+  background: #a1a1a1;
+}
+.img01 {
+  border: 10px solid #eae2dd;
+  outline: 3px solid #ccc7be;
+  padding: 5px;
+}
