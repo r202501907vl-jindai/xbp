@@ -23,12 +23,11 @@
 	font-family: sans-serif;
     color:#232121;
     margin-left: 15px;
-    margin-bottom: 40px;
-background:linear-gradient(#ffffff, #ddf1ff); 
+    margin-bottom: 40px; 
 }
 .nanamestripe {
-  height: 250px;
-  margin: 30px 0;
+  height: 1800px;
+  margin: 50px 0;
   background: repeating-linear-gradient(-45deg, #ddd 0, #ddd 2px, #FFF 4px, #FFF 6px);
 }
 
@@ -59,16 +58,32 @@ h2{
     margin-top: 1em;
     font-size: 30px;
 }
-.button-14 a {
+.card-5 {
+  box-sizing: border-box;
+  width: 50em;
+  padding: 1.2em 2em;
+  margin: 0 auto;
+  color: #333232;
+   background: #f1f1f1;
+  border: 0.5px solid #e9eaea;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #393939,0 0 15px #fff;
+  transition: 0.3s;
+  transition: transform 0.3s ease;
+}
+.card-5:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+.button-20 a {
   font-family: 'Noto Sans JP', serif;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   color: #333;
   font-weight: 700;
   display: block;
   position: relative;
   box-sizing: border-box;
-  max-width: 250px;
+  max-width: 180px;
   text-align: center; 
   padding: 4px 16px 4px 0;
   margin: 24px;
@@ -78,23 +93,23 @@ h2{
   transition: all 0.3s;
 }
 
-.button-14 a::before {
+.button-20 a::before {
   content: "";
   display: block;
   position: absolute;
-  width: 250px;
+  width: 180px;
   height: 2px;
   background: #333;
   bottom: 0;
   transition: all 0.3s;
 }
 
-.button-14 a::after {
+.button-20 a::after {
   content: "";
   display: block;
   position: absolute;
   width: 30px;
-  height: 2px;
+  height: 3px;
   background: #333;
   rotate: 40deg;
   right: -4px;
@@ -102,25 +117,8 @@ h2{
   transition: all 0.3s;
 }
 
-.button-14 a:hover::after,
-.button-14 a:hover::before {
+.button-20 a:hover::after,
+.button-20 a:hover::before {
   translate: 20px 0;
   transition: all 0.3s;
-}
-.img03 {
-  border: 10px solid #cccccc;
-  outline: 3px solid #343434;
-  padding: 5px;
-}
-.box11{
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    color: #5d627b;
-    background: white;
-    border-top: solid 5px #5d627b;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-}
-.box11 p {
-    margin: 0; 
-    padding: 0;
 }
