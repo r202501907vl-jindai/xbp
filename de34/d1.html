@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>ぶちの第1回目</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+     <link rel="stylesheet" href="./css/1style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body style="text-align: center;">
+    <p class="bg_pattern Paper_v2"> 
+   <h1 class="title-03">Arduinoを触ってみる</h1>
+</div>
+ <div class="cstm-box-handdrawn"><h2>Arduinoとは？</h2><br>
+    入出力ポート（入力と出力ができる外部機器と信号のやり取りができる端子）がある<br>
+    マイコンボード（電子機器を制御する板状の小型コンピュータ）のこと。<br>
+    電子工作やプログラミングが簡単にできるプラットホーム。<br>
+  </div> 
+ <div class="cstm-box-handdrawn"><h2>Arduinoを使ってLチカ（LEDをチカチカさせる）</h2><br>   
+   <h3>LEDのプラスマイナスの見分け方</h3> 
+   長いほうが＋<u>（アノード）</u><br>
+   短いほうが－<u>（カソード）</u>という。<br>
+   <h3>Lチカプログラム</h3>
+   <img src="./images/スクリーンショット 2026-04-15 110601.png" width="95%" class="img01" alt="">
+   <br>
+ 
+
+    <h3>要点</h3>
+<ol style="text-align:left;">
+ <li>Arduinoでは基本的に命令文の最後には;(セミコロン)をつける。<br>
+<small>※｛｝でくくるループと条件分岐の場合は除く。</small></li><br>
+デジタルピンの設定
+<li><u>「pinMode」</u>:指定したピンを入出力どちらで使うか指定する。</li>
+<li><u>「digitalWrite」</u>:デザインピンの出力をLOW or HIGH（OFF or ON）で設定する。</li>
+<li><u>「delay」</u>:指定時間待たせる命令。単位はミリ秒(ms)</li>
+</ol></div>
+<div style="text-align:left;" class="cstm-box-handdrawn">
+<h3>for文とif文</h3>
+<ol><li>for (初期化式; 条件式; 変化式){
+  // 繰り返しの中で実行される処理
+}
+</li>
+<li>if (条件式){
+　処理内容1 　//条件式を満たす場合にのみ実行する
+}</il><br>
+<li>else{
+　処理内容2 　//条件式を満たさない場合にのみ実行される
+}</li><br>
+</ol></div>
+<div class="cstm-box-handdrawn"><h2>明るさセンサー</h2>
+  <u>CdSセル</u>：暗いところにおくと抵抗が強くなり、明るいところに置くと抵抗が弱くなる。<br>
+  <u>10kΩ抵抗</u>：10,000Ωの電気抵抗を持つ電子部品。回路内の電流の流れを制限する。<br>
+  <h3>明るさ測定プログラム</h3>
+ <img src="./images/スクリーンショット 2026-04-15 145317.png" width="95%" class="img01" alt="">
+ <br>
+ <br>
+</div>
+</body>
