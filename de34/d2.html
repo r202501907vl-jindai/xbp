@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>ぶちの第2回目</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+     <link rel="stylesheet" href="./css/1style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body style="text-align: center;">
+    <p class="bg_pattern Paper_v2"> 
+   <h1 class="title-03">Arduinoの基本</h1>
+</div>
+ <div class="cstm-box-handdrawn"><h2>Arduinoでステッピングモーターを動かしてみる</h2><br>
+    ステッピングモーターをA4988に接続し、STEPを９番ピン、DIRを8番ピン、VDDを5V、GNDとGNDに接続する。
+   <h3>ステッピングモーターを1.8度のステップ角度で動かすプログラム</h3>
+   <img src="./images/スクリーンショット 2026-04-21 2 104006.png" width="95%" class="img01" alt="">
+   <br> 
+   <br>
+  </div> 
+ <div class="cstm-box-handdrawn"><h2>ステッピングモーターを使ってメリーゴーランドを作る</h2><br>   
+<h3>使用材料</h3>
+<ul>
+    <li>モーター</li>
+    <li>フルカラーLED</li>
+    <li>画用紙</li>
+    <li>目印チャーム</li>
+</ul>
+ </div>
+
+ <div style="text-align:left;" class="cstm-box-handdrawn"><h3>モーターが1回転するのに合わせてに合わせてフルカラーLEDの色を変えるプログラム</h3>
+<pre><code>
+    #include <Adafruit_NeoPixel.h>
+
+// ===== モーター設定 =====
+const int DIR  = 8;
+const int STEP = 9;
+
+// ===== NeoPixel設定 =====
+#define PIN 6
+#define NUMPIXELS 5
+#define BRIGHTNESS 50
+
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+long stepCount = 0;
+
+void setup() {
+  pinMode(DIR, OUTPUT);
+  pinMode(STEP, OUTPUT);
+
+  pixels.begin();
+  pixels.setBrightness(BRIGHTNESS);
+  pixels.show();
+}
+
+void loop() {
+
+  digitalWrite(DIR, HIGH);
+
+  for (int i = 0; i < 400; i++) {
+    stepMotor(1000);
+    updateColor();
+  }
+
+  delay(500);
+
+  digitalWrite(DIR, LOW);
+
+  for (int i = 0; i < 400; i++) {
+    stepMotor(1000);
+    updateColor();
+  }
+
+  delay(500);
+}
+
+// ===== モーター1ステップ =====
+void stepMotor(int delaytime) {
+  digitalWrite(STEP, HIGH);
+  delayMicroseconds(delaytime);
+  digitalWrite(STEP, LOW);
+  delayMicroseconds(delaytime);
+
+  stepCount++;
+}
+
+// ===== 色更新（200ステップごとに切替） =====
+void updateColor() {
+
+  int colorIndex = (stepCount / 200) % 6;
+
+  uint32_t color;
+
+  switch(colorIndex) {
+    case 0: color = pixels.Color(255, 0, 0); break;   // 赤
+    case 1: color = pixels.Color(0, 255, 0); break;   // 緑
+    case 2: color = pixels.Color(0, 0, 255); break;   // 青
+    case 3: color = pixels.Color(255, 255, 0); break; // 黄
+    case 4: color = pixels.Color(0, 255, 255); break; // 水色
+    case 5: color = pixels.Color(255, 0, 255); break; // 紫
+  }
+
+  for (int i = 0; i < NUMPIXELS; i++) {
+    pixels.setPixelColor(i, color);
+  }
+
+  pixels.show();
+}
+</code></pre>
+</div>
+<div class="cstm-box-handdrawn"><h2>完成品</h2>
+<img src="./images/IMG_4578.jpeg" width="95%" class="img01" alt="">
+<br>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tTEfH_F9dOw?si=iU3JzsIIL3OEKYtS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+ <br>
+ <div class="cstm-box-handdrawn"><h2>感想</h2>
+前回使ったフルカラーLEDとモーターを組み合わせた作品を今回制作しましたが、他の人の作品を見て、明るさを感知して動くようにしてみてもよかったのかなと思いました。
+他の人の作品を見ていて、同じシステム、同じ命令をしていても全く別のモノができてたりして、鑑賞中に驚かされることが多かったです。今まで制作していたものはデザイン重視な側面
+がありましたが、今回の制作でシステムをどのように使うかなどの見えない部分でのデザインも必要になってきたように感じました。
+
+</div>
+
+</body>
