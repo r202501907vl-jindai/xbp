@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>ぶちの第4回目</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+     <link rel="stylesheet" href="./css/4style.css">
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+</head>
+<body style="text-align: center;">
+    <p class="bg_pattern Paper_v2">
+
+
+  <!-- サイドバー -->
+  <div class="sidebar">
+    <h2>MENU</h2>
+
+    <a href="../de12/index.html">デザイン演習Ⅰ・Ⅱ</a>
+    <a href="./index.html">デザイン演習Ⅲ・Ⅳ</a>
+    <a href="../digi_fab/index.html">デジタルファブリケーション</a>
+  </div> 
+   
+  <h1 class="title-03">BizTech
+    <h2>~BizTechを使って独自のアプリを作成する~</h2>
+  </h1>
+</div>
+  </div> 
+ <div><h2>🧪理系口調変換機🧪</h2>
+    Chat GPTを活用しながら、アプリに打ち込んだ言葉、文章を過剰に論理的な言い回しに変換するアプリを作成した。<br>
+    使用API:Chat GPT<br>
+  <div><h2>app.py</h2></div> 
+    <textarea class="code-input">
+ import os
+from flask import Flask, render_template, request
+from openai import OpenAI
+
+app = Flask(__name__)
+
+# OpenAIクライアント
+client = OpenAI(
+    api_key=""
+)
+
+def convert_to_science_style(text):
+    prompt = f"""
+以下の言葉を、過剰な理系オタク・研究者風の口調に変換だけしてください。
+特徴：
+- 無駄に論理的に変換
+- 数式や専門用語っぽい言い回しを混ぜて変換
+- 日常会話を無駄に難しく言う
+- 専門用語を多用する
+-文字数は80文字以内
+入力文：
+{text}
+"""
+
+    response = client.chat.completions.create(
+        model="gpt-4.1-mini",
+        messages=[
+            {
+                "role": "system",
+                "content": "あなたは過剰に理系っぽい口調へ変換する専門AIです。"
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        temperature=1.0
+    )
+
+    return response.choices[0].message.content
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    converted_text = ""
+
+    if request.method == "POST":
+        user_text = request.form.get("text")
+
+        if user_text:
+            converted_text = convert_to_science_style(user_text)
+
+    return render_template(
+        "index.html",
+        converted_text=converted_text
+    )
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 3000))
+    app.run(host="0.0.0.0", port=port)
+</textarea>
+<div><h2>index.html</h2>
+<textarea class="code-input">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>理系口調変換機</title>
+    
+
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: #8cbef0;
+            padding: 40px;
+        }
+
+        .container{
+            max-width: 800px;
+            margin: auto;
+            background: rgb(215, 234, 255);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align: center;
+            color: #001125;
+        }
+        h2{
+           text-align: center;
+            color: #001125; 
+        }
+        textarea{
+            width: 100%;
+            height: 180px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button{
+            margin-top: 20px;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: #0056b3;
+        }
+
+        .result{
+            margin-top: 30px;
+            background-color: #eef2f7;
+            padding: 20px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🧪理系口調変換機🧪</h1>
+    <h2>~理論系言語変換アルゴリズムv1.0構造生成装置~</h2>
+
+    <form method="POST">
+        <textarea name="text" placeholder="変換したい文章を入力してください">
+
+        <button type="submit">
+            理系エネルギー注入
+        </button>
+    </form>
+
+    {% if converted_text %}
+    <div class="result">
+        {{ converted_text }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
+</textarea>
+</div>
+<div><h2>requirements.txt</h2>
+<textarea class="code-input">
+Flask==3.0.3
+openai==1.30.1
+gunicorn==22.0.0
+</textarea>
+</div>
+<style>
+.code-input{
+  width: 650px;
+  height: 300px;
+
+  background: #1e1e1e;
+  color: white;
+
+  font-family: monospace;
+  font-size: 14px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  resize: none; /* サイズ変更禁止 */
+
+  overflow: auto;
+}
+</style>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7bGNSQqrTJ8?si=N4UEvxnEkj7ikCMV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="cstm-box-handdrawn"><h2>まとめ</h2>
+今回のflaskを使ったアプリ制作は、教授に事前に作成してもらったツールを使用したことで比較的簡単に作ることができ、Webアプリケーション作成の大まかな全体像を把握することができた。
+これからAIを活用するためにAIと会話できるだけの知識は蓄えていきたいと思った。
+<br>
+<br>
+</div>
+</body>
+</html>
